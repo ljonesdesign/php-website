@@ -23,4 +23,4 @@ Require shibboleth
 
 USE THIS LINE FOR THE HONORS PROJECT
 # Grant access to specific Onyen users by additionally uncommenting and editing the following line:
-# Require shib-user onyen1 onyen2 onyen3
+Require shib-user soulan lblakej
