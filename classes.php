@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Classes';
 $bkgdImage = 'running.jpg';
-include 'includes/header.php'; // Don't change this.
+include 'includes/sub-header.php'; // Don't change this.
 ?>
 
 <!-- THIS IS THE UNIQUE CONTENT FOR EACH PAGE! -->
