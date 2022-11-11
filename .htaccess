@@ -1,0 +1,26 @@
+Your opal website can be protected by Onyen authentication.
+Your web folder is named "public_html" and your individual URL is https://opal.ils.unc.edu/~onyen.
+This file should be placed in your "public_html" folder or a subfolder.
+Create the .htaccess file, paste in the following code and customize to your needs:
+
+
+# Sample .htaccess file for opal.ils.unc.edu
+# Use this file to control Onyen authentication on your https://opal.ils.unc.edu/~onyen web pages
+# Lines beginning with the "#" character are commented out.
+# To remove Onyen authentication entirely and open access to the world, comment out all lines.
+
+# Provide users a logout link on your website by including the following in your HTML code::
+# <a href="https://opal.ils.unc.edu/Shibboleth.sso/Logout?return=https://sso.unc.edu/idp/logout.jsp">logout</a>
+
+# Leave the following three lines uncommented for basic campus-wide Onyen authentication:
+AuthType shibboleth
+ShibRequireSession On
+ShibRedirectToSSL 443
+Require shibboleth
+
+# Grant Onyen access to all SILS affiliates by additionally uncommenting the following line:
+# Require shib-attr isMemberOf ~ ^(unc:org:370101:member)
+
+USE THIS LINE FOR THE HONORS PROJECT
+# Grant access to specific Onyen users by additionally uncommenting and editing the following line:
+# Require shib-user onyen1 onyen2 onyen3
